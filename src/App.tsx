@@ -167,7 +167,9 @@ const App: React.FC = () => {
               style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
               whileHover={{ borderColor: '#4f46e5', y: -3 }}
             >
-              <img src="/images/dicoding.png" alt="Dicoding Indonesia" style={{ height: '28px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+              <div style={{ background: '#fff', borderRadius: '8px', padding: '4px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <img src="/images/dicoding.png" alt="Dicoding Indonesia" style={{ height: '22px', objectFit: 'contain' }} />
+              </div>
               <div>
                 <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>Dicoding Indonesia</p>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Member & Certified Developer</p>
@@ -200,7 +202,9 @@ const App: React.FC = () => {
               style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
               whileHover={{ borderColor: '#1f70c1', y: -3 }}
             >
-              <img src="/images/ibm.png" alt="IBM SkillsBuild" style={{ height: '28px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+              <div style={{ background: '#fff', borderRadius: '8px', padding: '4px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <img src="/images/ibm.png" alt="IBM SkillsBuild" style={{ height: '22px', objectFit: 'contain' }} />
+              </div>
               <div>
                 <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>IBM SkillsBuild</p>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Collaboration Partner</p>
