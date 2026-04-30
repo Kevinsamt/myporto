@@ -150,76 +150,70 @@ const App: React.FC = () => {
       </section>
 
       {/* Affiliation Section */}
-      <section style={{ padding: '3rem 0' }}>
+      <section style={{ padding: '2.5rem 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <motion.div
+          <motion.p
             {...fadeIn}
-            style={{ textAlign: 'center', marginBottom: '2.5rem' }}
+            style={{ textAlign: 'center', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '2rem' }}
           >
-            <p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 700 }}>
-              Part of & Collaboration with
-            </p>
-          </motion.div>
+            Part of &amp; Collaboration with
+          </motion.p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
-            {[
-              {
-                name: 'Dicoding Indonesia',
-                role: 'Member & Certified Developer',
-                logo: '/images/dicoding.png',
-                color: '#4f46e5'
-              },
-              {
-                name: 'Pijak',
-                role: 'Collaboration Partner',
-                logo: '/images/pijak.png',
-                color: '#0ea5e9'
-              },
-              {
-                name: 'IBM SkillsBuild',
-                role: 'Collaboration with IBM',
-                logo: '/images/ibm.png',
-                color: '#006699'
-              }
-            ].map((org, i) => (
-              <motion.div
-                key={org.name}
-                {...fadeIn}
-                transition={{ delay: i * 0.1 }}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem',
-                  padding: '1rem 1.5rem',
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--border)',
-                  borderRadius: 'var(--radius-md)',
-                  transition: 'var(--transition)',
-                  cursor: 'default',
-                  minWidth: '220px'
-                }}
-                whileHover={{ borderColor: org.color, y: -3 }}
-              >
-                <div style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '10px',
-                  background: `${org.color}22`,
-                  border: `1px solid ${org.color}44`,
-                  overflow: 'hidden',
-                  flexShrink: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <img src={org.logo} alt={org.name} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
-                </div>
-                <div>
-                  <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem', margin: 0, lineHeight: 1.3 }}>{org.name}</p>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.72rem', margin: 0, marginTop: '0.15rem' }}>{org.role}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+
+            {/* Dicoding */}
+            <motion.div
+              {...fadeIn} transition={{ delay: 0 }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              whileHover={{ borderColor: '#4f46e5', y: -3 }}
+            >
+              <div style={{ background: '#4f46e5', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <span style={{ color: '#fff', fontWeight: 900, fontSize: '1rem', fontFamily: 'Syne, sans-serif' }}>d</span>
+              </div>
+              <div>
+                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>Dicoding Indonesia</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>Member & Certified Developer</p>
+              </div>
+            </motion.div>
+
+            {/* Separator dot */}
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--border)' }} />
+
+            {/* piJak x IBM */}
+            <motion.div
+              {...fadeIn} transition={{ delay: 0.1 }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              whileHover={{ borderColor: '#e5342a', y: -3 }}
+            >
+              <div style={{ background: '#e5342a', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <span style={{ color: '#fff', fontWeight: 900, fontSize: '0.85rem', fontFamily: 'Syne, sans-serif' }}>pJ</span>
+              </div>
+              <div>
+                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>
+                  <span style={{ color: '#e5342a' }}>pi</span><span style={{ color: '#e5342a', fontStyle: 'italic' }}>J</span><span style={{ color: '#e5342a' }}>ak</span>
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>in collaboration with IBM SkillsBuild</p>
+              </div>
+            </motion.div>
+
+            {/* Separator dot */}
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--border)' }} />
+
+            {/* IBM SkillsBuild */}
+            <motion.div
+              {...fadeIn} transition={{ delay: 0.2 }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              whileHover={{ borderColor: '#1f70c1', y: -3 }}
+            >
+              <div style={{ background: '#1f70c1', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <span style={{ color: '#fff', fontWeight: 900, fontSize: '0.78rem', letterSpacing: '-1px' }}>IBM</span>
+              </div>
+              <div>
+                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>IBM SkillsBuild</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>Collaboration Partner</p>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
