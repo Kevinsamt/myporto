@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
-  Code2, 
   Cpu, 
   Globe, 
-  Rocket, 
   MessageSquare, 
   ChevronRight, 
-  Share2, 
   Mail,
-  Zap,
   TrendingUp,
   Store,
   Camera,
