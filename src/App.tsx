@@ -159,58 +159,72 @@ const App: React.FC = () => {
             Part of &amp; Collaboration with
           </motion.p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-
-            {/* Dicoding */}
-            <motion.div
-              {...fadeIn} transition={{ delay: 0 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
-              whileHover={{ borderColor: '#4f46e5', y: -3 }}
-            >
-              <div style={{ background: '#fff', borderRadius: '8px', padding: '4px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <img src="/images/dicoding.png" alt="Dicoding Indonesia" style={{ height: '22px', objectFit: 'contain' }} />
-              </div>
-              <div>
-                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>Dicoding Indonesia</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Member & Certified Developer</p>
-              </div>
-            </motion.div>
-
-            {/* Separator */}
-            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--border)', flexShrink: 0 }} />
-
-            {/* piJak x IBM SkillsBuild Banner */}
-            <motion.div
-              {...fadeIn} transition={{ delay: 0.1 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
-              whileHover={{ borderColor: '#e5342a', y: -3 }}
-            >
-              <img
-                src="/images/pijak_in_collaboration_with_ibm_skillsbuild.jpg"
-                alt="piJak x IBM SkillsBuild"
-                style={{ height: '32px', objectFit: 'contain', borderRadius: '4px' }}
-              />
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Collaboration Partner</p>
-            </motion.div>
-
-            {/* Separator */}
-            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--border)', flexShrink: 0 }} />
-
-            {/* IBM SkillsBuild */}
-            <motion.div
-              {...fadeIn} transition={{ delay: 0.2 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
-              whileHover={{ borderColor: '#1f70c1', y: -3 }}
-            >
-              <div style={{ background: '#fff', borderRadius: '8px', padding: '4px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <img src="/images/ibm.png" alt="IBM SkillsBuild" style={{ height: '22px', objectFit: 'contain' }} />
-              </div>
-              <div>
-                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>IBM SkillsBuild</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Collaboration Partner</p>
-              </div>
-            </motion.div>
-
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '1rem', flexWrap: 'wrap' }}>
+            {[
+              {
+                logo: '/images/dicoding.png',
+                alt: 'Dicoding Indonesia',
+                name: 'Dicoding Indonesia',
+                role: 'Member & Certified Developer',
+                color: '#4f46e5',
+                bgLogo: '#fff',
+                logoH: '22px'
+              },
+              {
+                logo: '/images/pijak_in_collaboration_with_ibm_skillsbuild.jpg',
+                alt: 'piJak × IBM SkillsBuild',
+                name: 'piJak × IBM SkillsBuild',
+                role: 'Collaboration Program',
+                color: '#e5342a',
+                bgLogo: '#fff',
+                logoH: '24px'
+              },
+              {
+                logo: '/images/ibm.png',
+                alt: 'IBM SkillsBuild',
+                name: 'IBM SkillsBuild',
+                role: 'Learning & Credentialing',
+                color: '#1f70c1',
+                bgLogo: '#fff',
+                logoH: '22px'
+              }
+            ].map((org, i) => (
+              <motion.div
+                key={org.name}
+                {...fadeIn}
+                transition={{ delay: i * 0.1 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.85rem',
+                  padding: '1rem 1.25rem',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border)',
+                  borderRadius: 'var(--radius-md)',
+                  width: '240px',
+                  flexShrink: 0
+                }}
+                whileHover={{ borderColor: org.color, y: -3 }}
+              >
+                <div style={{
+                  background: org.bgLogo,
+                  borderRadius: '8px',
+                  padding: '5px 8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  width: '52px',
+                  height: '36px'
+                }}>
+                  <img src={org.logo} alt={org.alt} style={{ height: org.logoH, width: '100%', objectFit: 'contain' }} />
+                </div>
+                <div style={{ minWidth: 0 }}>
+                  <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.82rem', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{org.name}</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.66rem', margin: 0, marginTop: '2px' }}>{org.role}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
