@@ -159,64 +159,58 @@ const App: React.FC = () => {
             Part of &amp; Collaboration with
           </motion.p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
 
             {/* Dicoding */}
             <motion.div
               {...fadeIn} transition={{ delay: 0 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
               whileHover={{ borderColor: '#4f46e5', y: -3 }}
             >
-              <div style={{ background: '#4f46e5', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#fff', fontWeight: 900, fontSize: '1rem', fontFamily: 'Syne, sans-serif' }}>d</span>
-              </div>
+              <img src="/images/dicoding.png" alt="Dicoding Indonesia" style={{ height: '28px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
               <div>
-                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>Dicoding Indonesia</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>Member & Certified Developer</p>
+                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>Dicoding Indonesia</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Member & Certified Developer</p>
               </div>
             </motion.div>
 
-            {/* Separator dot */}
-            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--border)' }} />
+            {/* Separator */}
+            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--border)', flexShrink: 0 }} />
 
-            {/* piJak x IBM */}
+            {/* piJak x IBM SkillsBuild Banner */}
             <motion.div
               {...fadeIn} transition={{ delay: 0.1 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
               whileHover={{ borderColor: '#e5342a', y: -3 }}
             >
-              <div style={{ background: '#e5342a', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#fff', fontWeight: 900, fontSize: '0.85rem', fontFamily: 'Syne, sans-serif' }}>pJ</span>
-              </div>
-              <div>
-                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>
-                  <span style={{ color: '#e5342a' }}>pi</span><span style={{ color: '#e5342a', fontStyle: 'italic' }}>J</span><span style={{ color: '#e5342a' }}>ak</span>
-                </p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>in collaboration with IBM SkillsBuild</p>
-              </div>
+              <img
+                src="/images/pijak_in_collaboration_with_ibm_skillsbuild.jpg"
+                alt="piJak x IBM SkillsBuild"
+                style={{ height: '32px', objectFit: 'contain', borderRadius: '4px' }}
+              />
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Collaboration Partner</p>
             </motion.div>
 
-            {/* Separator dot */}
-            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--border)' }} />
+            {/* Separator */}
+            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--border)', flexShrink: 0 }} />
 
             {/* IBM SkillsBuild */}
             <motion.div
               {...fadeIn} transition={{ delay: 0.2 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.8rem 1.4rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)' }}
               whileHover={{ borderColor: '#1f70c1', y: -3 }}
             >
-              <div style={{ background: '#1f70c1', borderRadius: '8px', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#fff', fontWeight: 900, fontSize: '0.78rem', letterSpacing: '-1px' }}>IBM</span>
-              </div>
+              <img src="/images/ibm.png" alt="IBM SkillsBuild" style={{ height: '28px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
               <div>
-                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem', margin: 0 }}>IBM SkillsBuild</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', margin: 0 }}>Collaboration Partner</p>
+                <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.85rem', margin: 0 }}>IBM SkillsBuild</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.68rem', margin: 0 }}>Collaboration Partner</p>
               </div>
             </motion.div>
 
           </div>
         </div>
       </section>
+
 
       {/* Expertise Section */}
       <section id="services">
