@@ -149,6 +149,81 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Affiliation Section */}
+      <section style={{ padding: '3rem 0' }}>
+        <div className="container">
+          <motion.div
+            {...fadeIn}
+            style={{ textAlign: 'center', marginBottom: '2.5rem' }}
+          >
+            <p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 700 }}>
+              Part of & Collaboration with
+            </p>
+          </motion.div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
+            {[
+              {
+                name: 'Dicoding Indonesia',
+                role: 'Member & Certified Developer',
+                logo: '/images/dicoding.png',
+                color: '#4f46e5'
+              },
+              {
+                name: 'Pijak',
+                role: 'Collaboration Partner',
+                logo: '/images/pijak.png',
+                color: '#0ea5e9'
+              },
+              {
+                name: 'IBM SkillsBuild',
+                role: 'Collaboration with IBM',
+                logo: '/images/ibm.png',
+                color: '#006699'
+              }
+            ].map((org, i) => (
+              <motion.div
+                key={org.name}
+                {...fadeIn}
+                transition={{ delay: i * 0.1 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '1rem 1.5rem',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border)',
+                  borderRadius: 'var(--radius-md)',
+                  transition: 'var(--transition)',
+                  cursor: 'default',
+                  minWidth: '220px'
+                }}
+                whileHover={{ borderColor: org.color, y: -3 }}
+              >
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '10px',
+                  background: `${org.color}22`,
+                  border: `1px solid ${org.color}44`,
+                  overflow: 'hidden',
+                  flexShrink: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <img src={org.logo} alt={org.name} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+                </div>
+                <div>
+                  <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem', margin: 0, lineHeight: 1.3 }}>{org.name}</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.72rem', margin: 0, marginTop: '0.15rem' }}>{org.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Expertise Section */}
       <section id="services">
         <div className="container">
