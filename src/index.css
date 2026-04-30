@@ -44,6 +44,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +55,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
 }
 
 /* =============================================
@@ -140,6 +142,8 @@ p { color: var(--text-secondary); }
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section {
@@ -155,8 +159,8 @@ section + section {
    GRID
    ============================================= */
 .grid { display: grid; gap: 1.5rem; }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
 
 /* =============================================
    NAVIGATION
@@ -355,6 +359,7 @@ nav.scrolled {
   align-items: center;
   position: relative;
   padding-top: 6rem;
+  overflow: hidden;
 }
 
 .hero-grid {
